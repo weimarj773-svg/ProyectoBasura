@@ -11,13 +11,13 @@ require __DIR__ . '/../src/AuthMiddleware.php';
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $method = $_SERVER['REQUEST_METHOD'];
-
+/*
 // Public: menu
 if ($uri === '/' || $uri === '/menu' || $uri === '/api/menu') {
     (new OrderController($pdo))->menu();
     exit;
 }
-
+*/
 // Public: create order
 if ($uri === '/api/checkout' && $method === 'POST') {
     (new OrderController($pdo))->createOrder();
